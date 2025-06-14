@@ -1,0 +1,84 @@
+# mkdocs.yml
+
+site_name: Vibe Coding Iceberg
+
+theme:
+  name: material
+  logo: assets/logo.png 
+  favicon: assets/favicon.ico
+  palette:
+    # A dark mode toggle will appear automatically with this setup
+    - scheme: default # The light mode theme
+      primary: white
+      accent: black
+    - scheme: slate  # The dark mode theme
+      primary: black
+      accent: amber
+  font:
+    text: Lato
+    code: Fira Code
+
+nav:
+  - 'Home': 'index.md'
+  - 'Foundations':
+    - '00 - Introduction': 'foundations/00-foundations-introduction.md'
+    - '01 - Frontend Architecture (a)': 'foundations/01-frontend-architecture.md'
+    - '01 - Frontend Architecture (b)': 'foundations/01b-frontend-architecture.md'
+    - '02 - Backend Architecture': 'foundations/02-backend-architecture.md'
+    - '03 - Database Modeling (a)': 'foundations/03a-database-modeling.md'
+    - '03 - Database Modeling (b)': 'foundations/03b-database-modeling.md'
+    - '04 - Auth Systems': 'foundations/04-auth-systems.md'
+    - '05 - AI Assistance': 'foundations/05-ai-assistance.md'
+    - '06 - Env Config (a)': 'foundations/06a-env-config.md'
+    - '06 - Env Config (b)': 'foundations/06b-env-config.md'
+    - '06 - Env Config (c)': 'foundations/06c-env-config.md'
+    - '06 - Env Config (d)': 'foundations/06d-env-config.md'
+  - 'Use Cases':
+    - '00 - Overview (a)': 'use-cases/00-use-cases.md'
+    - '00 - Overview (b)': 'use-cases/00b-use-cases.md'
+    - '01 - Build a Blog (a)': 'use-cases/01a-build-a-blog.md'
+    - '01 - Build a Blog (b)': 'use-cases/01b-build-a-blog.md'
+    - '02 - SaaS App Skeleton': 'use-cases/02-saas-app-skeleton.md'
+    - '03 - Personal Dashboard': 'use-cases/03-personal-dashboard.md'
+    - '04 - AI Portfolio Site': 'use-cases/04-ai-portfolio-site.md'
+    - '05 - Prompted Design System': 'use-cases/05-prompted-design-system.md'
+    - '06 - Static Markdown Site': 'use-cases/06-static-markdown-site.md'
+  - 'Tool Index':
+    - '01 - Frontend Tools': 'tool-index/01-frontend-tools.md'
+    - '02 - Backend Tools': 'tool-index/02-backend-tools.md'
+    - '03 - Infrastructure Tools': 'tool-index/03-infra-tools.md'
+    - '04 - Fullstack Builders (a)': 'tool-index/04-fullstack-builders.md'
+    - '04 - Fullstack Builders (b)': 'tool-index/04b-fullstack-builders.md'
+    - '05 - Fullstack Tools': 'tool-index/05-fullstack-tools.md'
+    - '06 - Design-to-Code Tools': 'tool-index/06-design-to-code-tools.md'
+    - '07 - AI Editors': 'tool-index/07-ai-editors.md'
+    - '08 - Databases': 'tool-index/08-databases.md'
+    - '09 - Host & Deploy Tools': 'tool-index/09-host-deploy.md'
+    - '10 - Comparison Matrix': 'tool-index/10-comparison-matrix.md'
+  - 'Prompts':
+    - '01 - Frontend Prompts': 'prompts/01-frontend-prompts.md'
+    - '02 - UI Prompts': 'prompts/02-ui-prompts.md'
+    - '03 - Backend Prompts': 'prompts/03-backend-prompts.md'
+    - '04 - API Prompts': 'prompts/04-api-prompts.md'
+    - '05 - Fullstack Prompts': 'prompts/05-fullstack-prompts.md'
+    - '06 - Infrastructure Prompts': 'prompts/06-infra-prompts.md'
+    - '07 - Authentication Prompts': 'prompts/07-auth-prompts.md'
+    - '08 - Database Prompts': 'prompts/08-db-prompts.md'
+    - '09 - Prompt Taxonomy': 'prompts/09-prompt-taxonomy.md'
+    - '10 - Cheat Sheet': 'prompts/10-vibe_coding_iceberg_prompt-cheat_sheet.md'
+  - 'Patterns':
+    - '00 - Introduction': 'patterns/00-patterns-introduction.md'
+    - '01 - Component Patterns (a)': 'patterns/01a-component-patterns.md'
+    - '01 - Component Patterns (b)': 'patterns/01b-component-patterns.md'
+    - '01 - Component Patterns (c)': 'patterns/01c-component-patterns.md'
+    - '01 - Component Patterns (d)': 'patterns/01d-component-patterns.md'
+    - '02 - API Patterns (a)': 'patterns/02-api-patterns.md'
+    - '02 - API Patterns (b)': 'patterns/02b-api-patterns.md'
+    - '03 - Project Scaffolds': 'patterns/03-project-scaffolds.md'
+    - '04 - State Management': 'patterns/04-state-management.md'
+    - '05 - Schema Migrations': 'patterns/05-schema-migration-patterns.md'
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
