@@ -86,16 +86,17 @@ This is a WIP (work in progress) still in draft mode. It's intended for:
 - Gluttons for punishment in an existential crisis
 
 ---
-
 ## 📬 Contact / Credits
-Created by [@danielleackerman](https://github.com/danielleackerman)
 
+[![GitHub](https://img.shields.io/badge/GitHub-danielleackerman-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/danielleackerman)
+
+---
 
 ## 🔗 Links & Resources
 
-* **Live Website:** [vibe-coding-iceberg.io](https://danielleackerman.github.io/vibe-coding-iceberg/)
-* **GitHub Repository:** [View the Source Code](https://github.com/danielleackerman/vibe-coding-iceberg)
-* **Contact & Contributions:** Have a question or want to contribute? Feel free to open an issue on GitHub or reach out directly.
+[![GitHub Repository](https://img.shields.io/badge/Vibe%20Coding%20Iceberg-4078c0?style=for-the-badge&logo=github&logoColor=white)](https://github.com/danielleackerman/vibe-coding-iceberg)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Danielle%20Ackerman-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/danielleackermandesigner/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Stuff%20What%20I%20Done-69707B?style=for-the-badge&logo=behance&logoColor=white)](https://danielleackermandesigner.myportfolio.com/graphic-design-projects)
 
 Feel free to fork, clone, remix, and remember _do it for vibes._
 
