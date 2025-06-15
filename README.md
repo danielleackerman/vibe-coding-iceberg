@@ -42,7 +42,7 @@ This repo is a **living map** of the "Vibe Coding Iceberg" — a layered mental 
 ```
 ## 🧊 Iceberg Layers
 
-Each layer of the iceberg represents a part of the stack:
+Each layer of the iceberg represents a part of the tech stack:
 
 1. **UI & Interaction** – React, Tailwind, Subframe
 2. **App Logic** – Form handling, routing, validation
@@ -53,7 +53,7 @@ Each layer of the iceberg represents a part of the stack:
 
 
 
-## 💡 Why Even Try?
+## 💡 Why Am I Sweating?
 
 "Vibe coding" is the emerging practice of using tools and prompts to generate real software — not just from vague ideas, but from **clear specifications as prompts**.
 
