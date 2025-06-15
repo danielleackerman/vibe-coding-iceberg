@@ -97,6 +97,6 @@ Created by [@danielleackerman](https://github.com/danielleackerman)
 * **GitHub Repository:** [View the Source Code](https://github.com/danielleackerman/vibe-coding-iceberg)
 * **Contact & Contributions:** Have a question or want to contribute? Feel free to open an issue on GitHub or reach out directly.
 
-Feel free to fork, clone, remix, and remember -- do it for vibes.
+Feel free to fork, clone, remix, and remember _do it for vibes._
 
 ![Vibey Iceberg](docs/assets/glacier-large.png)
