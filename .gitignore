@@ -1,0 +1,34 @@
+# --- MkDocs ---
+# This is the most important one! It's the folder where MkDocs builds your final website.
+# You should only ever commit the source files, not the built site.
+site/
+
+
+# --- Python ---
+# Python virtual environment folders.
+# If you ever create a virtual environment, its name will be ignored.
+venv/
+.venv/
+env/
+.env/
+
+# Python cache files and artifacts.
+# These are temporary files Python creates to run faster.
+__pycache__/
+*.pyc
+
+
+# --- macOS ---
+# Hidden system files created by macOS Finder.
+.DS_Store
+
+
+# --- VS Code ---
+# This folder stores your personal workspace settings.
+.vscode/
+
+
+# --- Sensitive Files ---
+# A common name for a file holding secret keys.
+# Never commit your secrets!
+.env

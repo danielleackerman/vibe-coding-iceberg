@@ -4,12 +4,12 @@
 
 > A vibey personal learning vault and public resource for mapping modern AI-assisted software development — from UI prototyping to infrastructure deployment.
 
----
+
 ## 💡 What Is This?
 
 This repo is a **living map** of the "Vibe Coding Iceberg" — a layered mental model for understanding how modern app development works when powered by AI tools like Replit, Bolt, Cursor, Subframe, and Supabase and more.
 
----
+
 
 ## ⛰️What Iceberg? 
 
@@ -51,7 +51,7 @@ Each layer of the iceberg represents a part of the stack:
 5. **Infrastructure & CI/CD** – Vercel, Netlify, Astro, serverless
 6. **AI Prompting** – How language connects all the layers
 
----
+
 
 ## 💡 Why Even Try?
 
@@ -64,7 +64,7 @@ This repo exists to:
 - Collect prompt examples that reveal the hidden layers
 - Explore the full stack of modern development as an iceberg
 
----
+
 
 ## 🗂 What's in Here?
 
@@ -72,7 +72,7 @@ This repo exists to:
 - (Coming soon) Structured `.md` files by layer
 - (Optional) A MkDocs or Astro site for publishing
 
----
+
 
 ## 🧪 Chipping Away
 
@@ -83,7 +83,7 @@ This is a WIP (work in progress) still in draft mode. It's intended for:
 - Indie developers exploring AI-first workflows
 - Gluttons for punishment in an existential crisis
 
----
+
 
 ## 📬 Contact / Credits
 
