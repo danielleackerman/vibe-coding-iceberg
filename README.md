@@ -1,7 +1,9 @@
-![Iceberg Animation](assets/header-animation.gif)
+![Iceberg Animation](docs/assets/header-animation.gif)
+
+[![Live Site](https://img.shields.io/badge/website-live-brightgreen)](https://danielleackerman.github.io/vibe-coding-iceberg/)
 
 # 🧊 Coding For Vibes
-[![Live Site](https://img.shields.io/badge/website-live-brightgreen)](https://danielleackerman.github.io/vibe-coding-iceberg/)
+
 > A vibey personal learning vault and public resource for mapping modern AI-assisted software development — from UI prototyping to infrastructure deployment.
 
 
@@ -11,7 +13,7 @@ This repo is a **living map** of the "Vibe Coding Iceberg" — a layered mental 
 
 
 
-## ⛰️What Iceberg? 
+## ⛰️ What Iceberg? 
 
 ```
 
@@ -97,4 +99,4 @@ Created by [@danielleackerman](https://github.com/danielleackerman)
 
 Feel free to fork, clone, remix, and remember -- do it for vibes.
 
-![Glacier Icon](assets/glacier-large.png)
+![Vibey Iceberg](docs/assets/glacier-large.png)
