@@ -100,9 +100,15 @@ This is a WIP (work in progress) still in draft mode. It's intended for:
 ---
 
 ## 📬 Contact / Credits
-
 Created by [@danielleackerman](https://github.com/danielleackerman)
 
-Feel free to fork, clone, remix. Always -- _do it for vibes._
+
+## 🔗 Links & Resources
+
+* **Live Website:** [vibe-coding-iceberg.io](https://danielleackerman.github.io/vibe-coding-iceberg/)
+* **GitHub Repository:** [View the Source Code](https://github.com/danielleackerman/vibe-coding-iceberg)
+* **Contact & Contributions:** Have a question or want to contribute? Feel free to open an issue on GitHub or reach out directly.
+
+Feel free to fork, clone, remix, and remember _do it for vibes._
 
 ![Glacier Icon](assets/glacier-large.png)
