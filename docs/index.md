@@ -1,5 +1,5 @@
 ---
-title: Vibe Coding Iceberg - Home
+title: Vibe Coding Iceberg - You Are Here
 nav_order: 1
 description: A living map and reference tool for understanding modern, AI-assisted software development, from UI prototyping to infrastructure deployment.
 tags:
@@ -103,6 +103,6 @@ This is a WIP (work in progress) still in draft mode. It's intended for:
 
 Created by [@danielleackerman](https://github.com/danielleackerman)
 
-Feel free to fork, clone, remix, and remember -- do it for vibes.
+Feel free to fork, clone, remix. Always -- _do it for vibes._
 
 ![Glacier Icon](assets/glacier-large.png)

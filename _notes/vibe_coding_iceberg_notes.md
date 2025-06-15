@@ -205,3 +205,27 @@ nav:
     - 'Introduction': 'foundations/00-foundations-introduction.md'
     # ... and so on
 ```
+
+# The Vibe Coding Iceberg: An Architectural Overview
+
+The iceberg is a mental model for visualizing a full software application. It separates the small, visible portion that users interact with from the vast, hidden foundation that gives it power and stability. Understanding the distinct role of each layer—and how they connect—is the key to understanding how modern software is built.
+
+### The Tip of the Iceberg: The User Interface (UI)
+
+This is the **ten percent** of the structure visible above the water. It is the polished, sculpted peak that catches the light—the part the user directly sees, touches, and experiences. It comprises all the visual elements: the layouts, the buttons, the forms, and the animations. For the end-user, the UI is the entire perceived reality of the application. Its shape and function, however, are entirely dependent on the massive structure beneath it for support and data.
+
+### The Waterline: The API Layer
+
+This is the dynamic, critical **waterline**, where the visible world meets the hidden depths. It is the surface through which all communication must pass. Requests from the UI—a button click, a search query—plunge down through this layer to the systems below. Data, information, and results from the depths surface here before being presented to the user. This layer acts as the formal contract, defining precisely what can be asked of the backend and what can be expected in return. It insulates the UI from the immense complexity submerged beneath it.
+
+### Below the Surface: The Backend & Business Logic
+
+This is the **vast, submerged mass** just below the surface, visible in the clear water. It is the immediate structural support that gives the tip its shape and strength. This is where the application's active "thinking" happens. When the API layer receives a request, this is the layer that processes it, enforces business rules, verifies user permissions, and orchestrates actions across different services. It is the application's central nervous system, constantly active and responding to stimuli from the surface.
+
+### The Deep Structure: The Database & Data Persistence
+
+Far below, in the dark, cold depths, lies the **immense, foundational core** of the iceberg. This is not the active "thinking" part, but the ancient, densely compressed ice that gives the entire structure its mass, its history, and its stability. This is the application's long-term memory and its single source of truth. The Backend Logic layer reads from and writes to this core, but this deep structure is designed for permanence and integrity, not speed. A crack in this foundation—data corruption—jeopardizes the entire structure above it.
+
+### The Unseen Foundation: Infrastructure & Deployment
+
+This is not even the iceberg itself, but the **tectonic plate on the ocean floor** upon which the iceberg rests. It is the fundamental reality that makes the iceberg's existence possible. This layer encompasses the global network of servers, the automated deployment pipelines, and the containerization systems that hold everything up and deliver it to the world. It provides the power and environment for the Database and Backend Logic to operate and is ultimately responsible for placing the entire iceberg into the vast ocean of the internet for others to find.

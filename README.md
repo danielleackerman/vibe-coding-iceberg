@@ -1,7 +1,7 @@
 ![Iceberg Animation](assets/header-animation.gif)
 
-# 🧊 Coding For Vibes _the Iceberg_
-
+# 🧊 Coding For Vibes
+[![Live Site](https://img.shields.io/badge/website-live-brightgreen)](https://danielleackerman.github.io/vibe-coding-iceberg/)
 > A vibey personal learning vault and public resource for mapping modern AI-assisted software development — from UI prototyping to infrastructure deployment.
 
 
@@ -88,7 +88,14 @@ This is a WIP (work in progress) still in draft mode. It's intended for:
 ## 📬 Contact / Credits
 
 Created by [@danielleackerman](https://github.com/danielleackerman)
+---
 
+## 🔗 Links & Resources
+
+* **Live Website:** [vibe-coding-iceberg.io](https://danielleackerman.github.io/vibe-coding-iceberg/)
+* **GitHub Repository:** [View the Source Code](https://github.com/danielleackerman/vibe-coding-iceberg)
+* **Contact & Contributions:** Have a question or want to contribute? Feel free to open an issue on GitHub or reach out directly.
+---
 Feel free to fork, clone, remix, and remember -- do it for vibes.
 
 ![Glacier Icon](assets/glacier-large.png)

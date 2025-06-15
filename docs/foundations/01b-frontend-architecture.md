@@ -72,19 +72,13 @@ Use these with tools like **Cursor, Bolt, v0.dev**, or **Subframe**.
 
 ---
 
-## 📌 Frontend Layers in Practice
+## ## 📌 Frontend Layers in Practice
 
-```plaintext
-+---------------------------------------------------+
-|                User Interface (UI)                |
-|    Components, Layouts, Buttons, Forms, Modals    |
-+---------------------------------------------------+
-|        State + Navigation (React, Next.js)        |
-|          Local state, global context, router      |
-+---------------------------------------------------+
-|             Styling (CSS/Tailwind)                |
-|       Design tokens, responsive, dark/light       |
-+---------------------------------------------------+
-|       API/Backend Integration (fetch, axios)      |
-|          JSON, GraphQL, REST, edge functions      |
-+---------------------------------------------------+
+Here is an overview of how the frontend architecture is structured in practice, reformatted as a table.
+
+| Layer | Key Concepts & Examples |
+| :--- | :--- |
+| **User Interface (UI)** | Components, Layouts, Buttons, Forms, Modals |
+| **State & Navigation** | `React`, `Next.js`, Local State, Global Context, Router |
+| **Styling** | `CSS`, `Tailwind`, Design Tokens, Responsive Design, Dark/Light Modes |
+| **API/Backend Integration**| `fetch`, `axios`, JSON, GraphQL, REST, Edge Functions |

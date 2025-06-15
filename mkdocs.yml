@@ -19,10 +19,10 @@ theme:
     code: Fira Code
 
 nav:
-  - 'Home': 'index.md'
+  - 'You Are Here': 'index.md'
   - 'Foundations':
     - '00 - Introduction': 'foundations/00-foundations-introduction.md'
-    - '01 - Frontend Architecture (a)': 'foundations/01-frontend-architecture.md'
+    - '01 - Frontend Architecture (a)': 'foundations/01a-frontend-architecture.md'
     - '01 - Frontend Architecture (b)': 'foundations/01b-frontend-architecture.md'
     - '02 - Backend Architecture': 'foundations/02-backend-architecture.md'
     - '03 - Database Modeling (a)': 'foundations/03a-database-modeling.md'

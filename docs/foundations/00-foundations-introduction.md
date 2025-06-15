@@ -78,11 +78,11 @@ AI and low-code tools can now scaffold apps from a single prompt. But if you don
 
 Each file in this folder covers one layer of the modern stack.
 
-```plaintext
-foundations/
-├── frontend-architecture.md    # UI frameworks, patterns, scaffolding
-├── backend-architecture.md     # APIs, functions, logic, server types
-├── database-modeling.md        # Tables, schemas, migrations, Supabase
-├── auth-systems.md             # Auth flows, tokens, Clerk vs Firebase
-├── ai-assistance.md            # Prompting each layer, scaffolding tips
-├── env-config.md               # .env variables, CI/CD, deployment glue
+| File | Covers |
+| :--- | :--- |
+| **`frontend-architecture.md`** | UI frameworks, component patterns, and scaffolding. |
+| **`backend-architecture.md`** | APIs, serverless functions, business logic, and server types. |
+| **`database-modeling.md`** | Tables, schemas, data relationships, migrations, and tools like Supabase. |
+| **`auth-systems.md`** | Authentication flows, tokens, and providers like Clerk vs. Firebase. |
+| **`ai-assistance.md`** | Prompting strategies for each layer and AI-powered scaffolding tips. |
+| **`env-config.md`** | `.env` variables, CI/CD secrets, and deployment configuration. |
