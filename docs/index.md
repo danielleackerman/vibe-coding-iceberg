@@ -104,9 +104,11 @@ Created by [@danielleackerman](https://github.com/danielleackerman)
 
 
 ## 🔗 Links & Resources
-**GitHub Repository:** [View the Source Code](https://github.com/danielleackerman/vibe-coding-iceberg)
-**LinkedIn Profile:** [Danielle Ackerman](https://www.linkedin.com/in/danielleackermandesigner/)
-**Portfolio:** [Graphic Design Projects](https://danielleackermandesigner.myportfolio.com/graphic-design-projects)
+| Me                 | You                                                               |
+| :------------------- | :----------------------------------------------------------------- |
+| **GitHub Repository**| [Vibe Coding Iceberg](https://github.com/danielleackerman/vibe-coding-iceberg) |
+| **LinkedIn Profile** | [Danielle Ackerman Designer](https://www.linkedin.com/in/danielleackermandesigner/)       |
+| **Portfolio** | [Stuff What I Done](https://danielleackermandesigner.myportfolio.com/graphic-design-projects) |
 
 **Contact & Contributions:** Have a question or want to contribute? Feel free to open an issue on GitHub or reach out directly.
 
