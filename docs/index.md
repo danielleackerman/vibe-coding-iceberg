@@ -105,10 +105,10 @@ Created by [@danielleackerman](https://github.com/danielleackerman)
 
 ## 🔗 Links & Resources
 
-* **Live Website:** [vibe-coding-iceberg.io](https://danielleackerman.github.io/vibe-coding-iceberg/)
-* **GitHub Repository:** [View the Source Code](https://github.com/danielleackerman/vibe-coding-iceberg)
-* **Contact & Contributions:** Have a question or want to contribute? Feel free to open an issue on GitHub or reach out directly.
-
+**GitHub Repository:** [View the Source Code](https://github.com/danielleackerman/vibe-coding-iceberg)
+**LinkedIn Profile:** [Danielle Ackerman](https://www.linkedin.com/in/danielleackermandesigner/)
+**Portfolio:** [Graphic Design Projects](https://danielleackermandesigner.myportfolio.com/graphic-design-projects)
+**Contact & Contributions:** Have a question or want to contribute? Feel free to open an issue on GitHub or reach out directly.
 Feel free to fork, clone, remix, and remember _do it for vibes._
 
 ![Glacier Icon](assets/glacier-large.png)
