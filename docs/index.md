@@ -14,7 +14,7 @@ layout: default
 ---
 ![Iceberg Animation](assets/header-animation.gif)
 
-# 🧊 Coding For Vibes _the Iceberg_
+# 🧊 Coding For Vibes 
 
 > A vibey personal learning vault and public resource for mapping modern AI-assisted software development — from UI prototyping to infrastructure deployment.
 

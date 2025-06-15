@@ -67,7 +67,6 @@ This repo exists to:
 - Explore the full stack of modern development as an iceberg
 
 
-
 ## 🗂 What's in Here?
 
 - `iceberg-notes.md` — your working vault of insights, prompts, and tools
@@ -85,12 +84,10 @@ This is a WIP (work in progress) still in draft mode. It's intended for:
 - Indie developers exploring AI-first workflows
 - Gluttons for punishment in an existential crisis
 
----
 ## 📬 Contact / Credits
 
 [![GitHub](https://img.shields.io/badge/GitHub-danielleackerman-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/danielleackerman)
 
----
 
 ## 🔗 Links & Resources
 
