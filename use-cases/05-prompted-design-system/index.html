@@ -1,0 +1,2910 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../04-ai-portfolio-site/">
+      
+      
+        <link rel="next" href="../06-static-markdown-site/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>05 - Prompted Design System - Vibe Coding Iceberg</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-1-define-your-foundational-design-tokens" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Vibe Coding Iceberg" class="md-header__button md-logo" aria-label="Vibe Coding Iceberg" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vibe Coding Iceberg
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              05 - Prompted Design System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Vibe Coding Iceberg" class="md-nav__button md-logo" aria-label="Vibe Coding Iceberg" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Vibe Coding Iceberg
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    You Are Here
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Foundations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/00-foundations-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/01a-frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Architecture (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/01b-frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Architecture (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/02-backend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Backend Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/03a-database-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Database Modeling (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/03b-database-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Database Modeling (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/04-auth-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Auth Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/05-ai-assistance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - AI Assistance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06a-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06b-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06c-env-config.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (c)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06d-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (d)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Use Cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00b-use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01a-build-a-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01b-build-a-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-saas-app-skeleton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - SaaS App Skeleton
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-personal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Personal Dashboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ai-portfolio-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - AI Portfolio Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    05 - Prompted Design System
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Prompted Design System
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-define-your-foundational-design-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Define Your Foundational Design Tokens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Define Your Foundational Design Tokens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-choose-your-development-documentation-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Choose Your Development &amp; Documentation Tooling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Choose Your Development &amp; Documentation Tooling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-generate-an-atomic-component-the-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Generate an Atomic Component (The Button)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Generate an Atomic Component (The Button)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-generate-a-composite-component-the-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Generate a Composite Component (The Card)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Generate a Composite Component (The Card)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-generate-a-data-input-component-the-form-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Generate a Data-Input Component (The Form Input)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Generate a Data-Input Component (The Form Input)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-generate-component-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Generate Component Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Generate Component Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-implement-accessibility-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Implement Accessibility Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7: Implement Accessibility Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-version-publish-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Version &amp; Publish the System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 8: Version &amp; Publish the System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-integrate-the-system-into-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Integrate the System into a Project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 9: Integrate the System into a Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-automate-maintenance-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 10: Automate Maintenance &amp; Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 10: Automate Maintenance &amp; Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-static-markdown-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Static Markdown Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tool Index
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tool Index
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/01-frontend-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/02-backend-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Backend Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/03-infra-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Infrastructure Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/04-fullstack-builders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Fullstack Builders (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/04b-fullstack-builders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Fullstack Builders (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/05-fullstack-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Fullstack Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/06-design-to-code-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Design-to-Code Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/07-ai-editors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07 - AI Editors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/08-databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08 - Databases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/09-host-deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    09 - Host & Deploy Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/10-comparison-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 - Comparison Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/01-frontend-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/02-ui-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - UI Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/03-backend-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Backend Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/04-api-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - API Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/05-fullstack-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Fullstack Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/06-infra-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Infrastructure Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/07-auth-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07 - Authentication Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/08-db-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08 - Database Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/09-prompt-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    09 - Prompt Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/10-vibe_coding_iceberg_prompt-cheat_sheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 - Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/00-patterns-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01a-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01b-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01c-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (c)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01d-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (d)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/02-api-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - API Patterns (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/02b-api-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - API Patterns (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/03-project-scaffolds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Project Scaffolds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/04-state-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - State Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/05-schema-migration-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Schema Migrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-define-your-foundational-design-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Define Your Foundational Design Tokens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Define Your Foundational Design Tokens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-choose-your-development-documentation-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Choose Your Development &amp; Documentation Tooling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Choose Your Development &amp; Documentation Tooling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-generate-an-atomic-component-the-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Generate an Atomic Component (The Button)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Generate an Atomic Component (The Button)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-generate-a-composite-component-the-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Generate a Composite Component (The Card)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Generate a Composite Component (The Card)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-generate-a-data-input-component-the-form-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Generate a Data-Input Component (The Form Input)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Generate a Data-Input Component (The Form Input)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-generate-component-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Generate Component Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Generate Component Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-implement-accessibility-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Implement Accessibility Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7: Implement Accessibility Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-version-publish-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Version &amp; Publish the System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 8: Version &amp; Publish the System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-integrate-the-system-into-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Integrate the System into a Project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 9: Integrate the System into a Project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-automate-maintenance-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 10: Automate Maintenance &amp; Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 10: Automate Maintenance &amp; Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>05 - Prompted Design System</h1>
+
+<p>```markdown
+A <strong>Prompted Design System</strong> is a modern approach to creating a reusable library of user interface (UI) components and standards, using AI as a primary tool for generation, documentation, and maintenance. This is not about replacing designers or developers, but about empowering them with AI to build more consistent and robust UIs at a much faster pace. By crafting precise prompts, you can direct an AI to generate components that adhere to a predefined visual language, ensuring brand consistency across all your applications. This guide provides a ten-step blueprint for building your own design system from the ground up using this prompt-driven workflow. The ultimate goal is to create a single source of truth for your UI that is both easy to use and simple to maintain.</p>
+<hr />
+<h3 id="step-1-define-your-foundational-design-tokens">Step 1: Define Your Foundational Design Tokens</h3>
+<p><strong>The Goal:</strong> Before creating any components, you must first define the fundamental "design tokens"—the core visual properties that will govern your entire system.</p>
+<p><strong>The Action:</strong> This involves making concrete decisions about your color palette, typography (fonts, sizes, weights), and spacing units. These tokens are the "atoms" of your design system. We will prompt an AI to generate a structured format for these tokens that our components can reference.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Generate a theme configuration object in <strong>JSON</strong> format for my design system. It must include a <code>colors</code> object with keys for <code>primary</code> (a dark blue), <code>secondary</code> (a teal), <code>neutral</code> (a range of grays from 100 to 900), <code>error</code> (a red), and <code>success</code> (a green). Also include a <code>typography</code> object with <code>fontSizes</code> (from 'sm' to 'xl') and <code>fontWeights</code> (regular, medium, bold). Finally, add a <code>spacing</code> object with numeric values based on a 4-pixel grid system."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. CSS Custom Properties</strong></td>
+<td style="text-align: left;">CSS</td>
+<td style="text-align: left;"><strong>The Web Standard.</strong> Choose this for a framework-agnostic approach. The tokens are defined in a global CSS file and can be used by any component, regardless of the JavaScript framework.</td>
+<td style="text-align: left;">Your root CSS file (<code>:root {}</code>), which then provides global variables to all your <strong>Frontend Components</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Tailwind CSS Config</strong></td>
+<td style="text-align: left;">JavaScript</td>
+<td style="text-align: left;"><strong>The Utility-First Choice.</strong> If your project is built with Tailwind, defining your tokens here allows you to use them as utility classes (e.g., <code>bg-primary</code>, <code>text-lg</code>).</td>
+<td style="text-align: left;">The <code>tailwind.config.js</code> file. This directly connects your design decisions to the <strong>Tailwind CSS</strong> styling engine.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Style Dictionary</strong></td>
+<td style="text-align: left;">JSON</td>
+<td style="text-align: left;"><strong>The Cross-Platform Choice.</strong> Choose this if you need to support multiple platforms (e.g., Web, iOS, Android). It takes a standard JSON file and can export tokens in many different formats.</td>
+<td style="text-align: left;">This is a build tool that connects your central <strong>JSON</strong> token file to multiple outputs, ensuring consistency across your entire <strong>Product Ecosystem</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-2-choose-your-development-documentation-tooling">Step 2: Choose Your Development &amp; Documentation Tooling</h3>
+<p><strong>The Goal:</strong> Select the primary "workshop" where you will build, test, view, and document your components in isolation.</p>
+<p><strong>The Action:</strong> This decision determines your entire workflow. We will choose a tool that allows for isolated component development, which is a core principle of building a design system.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_1">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"I need to choose a tool to build my React component library. Create a brief comparison table explaining the primary differences between <strong>Storybook</strong>, <strong>Bit</strong>, and <strong>Framer</strong>."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_1">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Storybook</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>The Industry Standard.</strong> Choose this for a robust, dedicated environment for building and documenting components in isolation. It has a massive ecosystem of addons.</td>
+<td style="text-align: left;">It connects to your component codebase, providing an interactive sandbox. The final Storybook site is then deployed to an <strong>Infrastructure Platform</strong> like Vercel.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Bit</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For Independent Components.</strong> Choose this when you want to treat every component as its own independent, versioned, and publishable package.</td>
+<td style="text-align: left;">Bit has its own cloud hosting for components, connecting your codebase to a powerful <strong>Component Registry</strong> and CI/CD system.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Framer</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For Design-Led Systems.</strong> Choose this when your primary goal is to create a visually rich, interactive design system website where the design and the component are one and the same.</td>
+<td style="text-align: left;">Framer is its own integrated <strong>Design and Infrastructure Platform</strong>, connecting your design work directly to a live, hosted URL.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-3-generate-an-atomic-component-the-button">Step 3: Generate an Atomic Component (The Button)</h3>
+<p><strong>The Goal:</strong> Start with the smallest, most fundamental building block of any UI: the button.</p>
+<p><strong>The Action:</strong> We'll write a detailed prompt that instructs the AI to create a button component which uses the design tokens we defined in Step 1.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_2">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Generate a reusable <strong>React Button component</strong> using <strong>TypeScript</strong>. It must accept a <code>variant</code> prop (<code>'primary'</code> or <code>'secondary'</code>) and a <code>size</code> prop (<code>'sm'</code> or <code>'md'</code>). Using <strong>Tailwind CSS</strong>, style the <code>primary</code> variant with the <code>primary</code> color token from our theme config, and the <code>secondary</code> variant with the <code>secondary</code> color. The component should render a standard HTML <code>&lt;button&gt;</code> element."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_2">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Tailwind CSS</strong></td>
+<td style="text-align: left;">CSS</td>
+<td style="text-align: left;"><strong>For Rapid Custom Styling.</strong></td>
+<td style="text-align: left;">Connects your <strong>React Component</strong> to your <code>tailwind.config.js</code> <strong>Design Tokens</strong>, allowing for fast, utility-based styling.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. CSS-in-JS</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For Encapsulated Styles.</strong></td>
+<td style="text-align: left;">Connects your styles directly to your <strong>React Component</strong> file, preventing style leakage and making the component a self-contained unit.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. CSS Modules</strong></td>
+<td style="text-align: left;">CSS</td>
+<td style="text-align: left;"><strong>For Scoped, Performant CSS.</strong></td>
+<td style="text-align: left;">Connects a standard CSS file to a single <strong>React Component</strong>, ensuring class names are unique and don't conflict globally.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-4-generate-a-composite-component-the-card">Step 4: Generate a Composite Component (The Card)</h3>
+<p><strong>The Goal:</strong> Combine our atomic <code>Button</code> component with other elements to create a more complex, composite component.</p>
+<p><strong>The Action:</strong> We will prompt the AI to build a "Card" component that uses our <code>Button</code> component as a child element. This tests the reusability of our system.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_3">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Create a <code>ProductCard</code> React component. It should have a designated slot for an image at the top, a <code>title</code> (h3), a <code>description</code> (p), and at the bottom, it must render the <code>PrimaryButton</code> component we already created, passing the text 'View Details' to it."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_3">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Standard Props</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For Simple Composition.</strong> Pass components directly as props (e.g., <code>&lt;Card actionButton={&lt;Button /&gt;} /&gt;</code>).</td>
+<td style="text-align: left;">Connects a parent component to a child by treating the child as a piece of data.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. React <code>children</code></strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>The Standard React Pattern.</strong> The most common and flexible way to compose components in React (e.g., <code>&lt;Card&gt;&lt;Button/&gt;&lt;/Card&gt;</code>).</td>
+<td style="text-align: left;">Connects components by allowing you to nest them in a natural, HTML-like way.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Compound Components</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For Tightly Coupled Sets.</strong> For creating a set of components that are designed to work together as a single unit (e.g., <code>&lt;Menu&gt;&lt;Menu.Item/&gt;&lt;/Menu&gt;</code>).</td>
+<td style="text-align: left;">This connects multiple components by having them share an implicit, underlying state managed by the parent.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-5-generate-a-data-input-component-the-form-input">Step 5: Generate a Data-Input Component (The Form Input)</h3>
+<p><strong>The Goal:</strong> Create a robust and accessible form input component, defining its various visual states.</p>
+<p><strong>The Action:</strong> Prompt the AI to generate an <code>Input</code> component that handles states like focus, error, and disabled.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_4">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Generate a React <code>Input</code> component that wraps a standard HTML <code>&lt;input&gt;</code>. It must accept a <code>label</code> and an <code>error</code> message prop. Using Tailwind CSS, the border should be gray by default, turn blue on <code>:focus</code>, and turn red if the <code>error</code> prop is present. If the component receives a <code>disabled</code> prop, it should have a light gray background and muted text."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_4">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Uncontrolled Component</strong></td>
+<td style="text-align: left;">HTML/JS</td>
+<td style="text-align: left;"><strong>For Simple Forms.</strong> The component's state is handled by the browser's DOM itself. Simple and performant.</td>
+<td style="text-align: left;">Connects directly to native HTML form behavior.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Controlled Component</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For Interactive Forms.</strong> The component's value is controlled by React state (<code>useState</code>). This gives you full control and allows for real-time validation.</td>
+<td style="text-align: left;">Connects the component's value directly to your application's <strong>Frontend State Management</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Form Library Integration</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For Complex Forms.</strong> Use a library like <strong>React Hook Form</strong> or <strong>Formik</strong> to manage state, validation, and submission for large forms.</td>
+<td style="text-align: left;">Connects your component to a powerful, dedicated <strong>Form State Management</strong> library, abstracting away the complexity.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-6-generate-component-documentation">Step 6: Generate Component Documentation</h3>
+<p><strong>The Goal:</strong> Use AI to automatically write clear, helpful documentation for the components we've created.</p>
+<p><strong>The Action:</strong> Provide the AI with the component's code and ask it to generate user-facing documentation.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_5">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Here is the code for my <code>PrimaryButton</code> component: <code>[paste code]</code>. Generate documentation for it in <strong>MDX format</strong>. The documentation should include a brief description, a list of all available props with their types and default values, and at least two usage examples: one for a primary button and one for a secondary button."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_5">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. MDX</strong></td>
+<td style="text-align: left;">MDX</td>
+<td style="text-align: left;"><strong>For Interactive Docs.</strong> MDX allows you to write JSX (React components) directly inside your Markdown files, creating live, interactive examples.</td>
+<td style="text-align: left;">This connects your documentation directly to your live <strong>Component Library</strong>, making your docs a living part of your system.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. JSDoc Comments</strong></td>
+<td style="text-align: left;">JavaScript</td>
+<td style="text-align: left;"><strong>For Docs-as-Code.</strong> Write documentation directly in code comments. Tools can then parse these comments to automatically generate a documentation site.</td>
+<td style="text-align: left;">This connects your documentation directly to your source code, ensuring that the docs are always located right next to the code they describe.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Notion</strong></td>
+<td style="text-align: left;">Markdown</td>
+<td style="text-align: left;"><strong>For Easy Collaboration.</strong> Use Notion for its familiar writing interface and collaborative features, especially if non-developers need to contribute to docs.</td>
+<td style="text-align: left;">This connects your design system documentation to a widely-used <strong>Collaboration Tool</strong>, making it accessible to your whole team.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-7-implement-accessibility-checks">Step 7: Implement Accessibility Checks</h3>
+<p><strong>The Goal:</strong> Ensure the components are usable by everyone, including people with disabilities.</p>
+<p><strong>The Action:</strong> Prompt an AI to analyze our component code and suggest improvements based on accessibility (a11y) best practices.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_6">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Analyze the code for my <code>PrimaryButton</code> component: <code>[paste code]</code>. Check it for common accessibility issues. Specifically, ensure it can be operated by a keyboard, has a sufficient color contrast ratio, and includes the necessary ARIA attributes."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_6">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Storybook A11y Addon</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;"><strong>For Live Testing.</strong> Provides an accessibility panel directly within <strong>Storybook</strong>, allowing you to test components for issues as you build them.</td>
+<td style="text-align: left;">Connects the <strong>WAVE/Axe</strong> accessibility testing engines directly to your <strong>Component Development Environment</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. ESLint JSX A11y Plugin</strong></td>
+<td style="text-align: left;">JavaScript</td>
+<td style="text-align: left;"><strong>For Static Analysis.</strong> Checks your code for accessibility issues automatically in your code editor as you type.</td>
+<td style="text-align: left;">Connects accessibility rules directly to your <strong>Code Editor</strong>, providing real-time feedback.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Jest Axe</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For Automated Testing.</strong> Write automated tests that check your components for accessibility violations as part of your <strong>CI/CD pipeline</strong>.</td>
+<td style="text-align: left;">Connects accessibility testing to your <strong>Automated Test Suite</strong>, preventing regressions from being deployed.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-8-version-publish-the-system">Step 8: Version &amp; Publish the System</h3>
+<p><strong>The Goal:</strong> Package the design system so it can be installed and used in other projects.</p>
+<p><strong>The Action:</strong> We'll choose a package manager or platform to publish our component library.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_7">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Generate the necessary configuration for my <code>package.json</code> file to publish my React component library to the <strong>NPM registry</strong>. It needs a name, version, main entry point, and peer dependencies for <code>react</code> and <code>react-dom</code>."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_7">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. NPM / GitHub Packages</strong></td>
+<td style="text-align: left;">JSON</td>
+<td style="text-align: left;"><strong>The Public Standard.</strong> The default way to distribute and share JavaScript code with the world or within a private organization.</td>
+<td style="text-align: left;">This connects your design system to the global <strong>JavaScript Package Management</strong> ecosystem.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Bit.dev</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;"><strong>For Independent Components.</strong> A cloud platform that allows you to publish, version, and share each component as its own independent package.</td>
+<td style="text-align: left;">This connects your components to a dedicated <strong>Component Cloud Hosting</strong> platform, making them easily discoverable and shareable.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Local Monorepo</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;"><strong>For Internal Sharing.</strong> Use a tool like <strong>Turborepo</strong> or <strong>Nx</strong> to manage a single repository that contains both your design system and the projects that use it.</td>
+<td style="text-align: left;">This connects your design system directly to your applications within a single <strong>Git Repository</strong>, simplifying local development.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-9-integrate-the-system-into-a-project">Step 9: Integrate the System into a Project</h3>
+<p><strong>The Goal:</strong> Use our newly published design system in a separate application.</p>
+<p><strong>The Action:</strong> We'll install our component library package and import the components to build a new UI.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_8">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"I have published my design system to NPM as <code>@my-org/ui</code>. Show me the command to install it in a new <strong>Next.js</strong> project. Then, show me how to import the <code>PrimaryButton</code> component and use it on my homepage."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_8">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Next.js App</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For a Fullstack App.</strong> Demonstrate how a complete web application consumes the design system.</td>
+<td style="text-align: left;">This connects your <strong>Design System</strong> to a real-world <strong>Fullstack Builder</strong>, proving its utility.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Astro Site</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For a Static Site.</strong> Show how a content-focused site can use the design system for consistent branding.</td>
+<td style="text-align: left;">This connects your <strong>Design System</strong> to a different type of <strong>Frontend Framework</strong>, showcasing its flexibility.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Storybook Itself</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For Documentation.</strong> The design system's own Storybook is the primary consumer of its components for documentation purposes.</td>
+<td style="text-align: left;">This connects your components back to their own <strong>Documentation Platform</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-10-automate-maintenance-updates">Step 10: Automate Maintenance &amp; Updates</h3>
+<p><strong>The Goal:</strong> Set up an automated pipeline to test and publish new versions of the design system whenever we make changes.</p>
+<p><strong>The Action:</strong> We will prompt an AI to generate a CI/CD workflow file.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_9">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Generate a <strong>GitHub Actions</strong> workflow that triggers on every push to the <code>main</code> branch. The workflow must install dependencies, run the linter, run the full test suite (including accessibility tests), and if all checks pass, automatically publish a new version of the package to <strong>NPM</strong> using an <code>NPM_TOKEN</code> secret."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_9">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. GitHub Actions</strong></td>
+<td style="text-align: left;">YAML</td>
+<td style="text-align: left;"><strong>For GitHub-Native CI/CD.</strong> Tightly integrated with your GitHub repository, making it the easiest choice if your code is hosted there.</td>
+<td style="text-align: left;">This connects your <strong>Git Repository</strong> directly to the <strong>NPM Package Registry</strong>, automating your release process.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. CircleCI</strong></td>
+<td style="text-align: left;">YAML</td>
+<td style="text-align: left;"><strong>For Complex Workflows.</strong> A powerful and highly configurable CI/CD platform that can handle very complex testing and deployment scenarios.</td>
+<td style="text-align: left;">This connects your <strong>Git Repository</strong> to a dedicated, high-performance <strong>CI/CD Platform</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Vercel / Netlify</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;"><strong>For Deploying the Docs.</strong> These platforms can be configured to automatically deploy your <strong>Storybook</strong> documentation site.</td>
+<td style="text-align: left;">This connects your <strong>Design System's Documentation</strong> to a world-class <strong>Infrastructure Platform</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Building a design system is a foundational investment that pays massive dividends in consistency and development speed. By using AI as a partner in this process, you can create, document, and maintain a professional-grade system more efficiently than ever before. This approach transforms a once-daunting task into a manageable and creative process. The resulting system becomes the heart of your product's user experience. Ultimately, a well-prompted design system allows you to scale your creative vision without sacrificing quality.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

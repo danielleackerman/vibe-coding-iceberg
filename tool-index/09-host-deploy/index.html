@@ -1,0 +1,1831 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tools for hosting, deploying, and managing cloud services and server environments.">
+      
+      
+      
+      
+        <link rel="prev" href="../08-databases/">
+      
+      
+        <link rel="next" href="../10-comparison-matrix/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Host & Deploy Tools - Vibe Coding Iceberg</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Vibe Coding Iceberg" class="md-header__button md-logo" aria-label="Vibe Coding Iceberg" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vibe Coding Iceberg
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Host & Deploy Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Vibe Coding Iceberg" class="md-nav__button md-logo" aria-label="Vibe Coding Iceberg" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Vibe Coding Iceberg
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    You Are Here
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Foundations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/00-foundations-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/01a-frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Architecture (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/01b-frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Architecture (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/02-backend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Backend Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/03a-database-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Database Modeling (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/03b-database-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Database Modeling (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/04-auth-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Auth Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/05-ai-assistance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - AI Assistance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06a-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06b-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06c-env-config.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (c)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06d-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (d)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Use Cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/00-use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/00b-use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/01a-build-a-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/01b-build-a-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/02-saas-app-skeleton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - SaaS App Skeleton
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/03-personal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Personal Dashboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/04-ai-portfolio-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - AI Portfolio Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/05-prompted-design-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Prompted Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/06-static-markdown-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Static Markdown Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tool Index
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tool Index
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-frontend-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-backend-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Backend Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-infra-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Infrastructure Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-fullstack-builders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Fullstack Builders (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04b-fullstack-builders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Fullstack Builders (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-fullstack-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Fullstack Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-design-to-code-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Design-to-Code Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-ai-editors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07 - AI Editors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08 - Databases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    09 - Host & Deploy Tools
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-comparison-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 - Comparison Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/01-frontend-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/02-ui-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - UI Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/03-backend-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Backend Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/04-api-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - API Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/05-fullstack-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Fullstack Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/06-infra-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Infrastructure Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/07-auth-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07 - Authentication Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/08-db-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08 - Database Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/09-prompt-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    09 - Prompt Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/10-vibe_coding_iceberg_prompt-cheat_sheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 - Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/00-patterns-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01a-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01b-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01c-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (c)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01d-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (d)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/02-api-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - API Patterns (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/02b-api-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - API Patterns (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/03-project-scaffolds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Project Scaffolds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/04-state-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - State Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/05-schema-migration-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Schema Migrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>09 - Host & Deploy Tools</h1>
+
+<pre><code class="language-markdown"># ⚙️ Host &amp; Deploy Tools
+
+**Hosting and Deployment Tools** are the final, critical link in the chain that takes an application from a developer's computer and makes it live, reliable, and accessible to the world. They are the **land, the physical address, and the global delivery network** for your digital creation.
+
+The core problem these tools solve is the immense operational complexity of running a professional web service. Historically, this involved managing physical servers, configuring networks, ensuring security, and manually updating code. Modern deployment platforms automate nearly this entire process, allowing creators to focus on building their product, not on being a full-time server administrator.
+
+---
+### Category 1: Frontend &amp; Serverless Platforms
+
+These platforms are highly optimized for deploying modern, JavaScript-based applications. They excel at serving frontend user interfaces at a global scale and running backend logic as on-demand &quot;serverless functions.&quot;
+
+* **Vercel**
+    * **Function:** A cloud platform from the creators of **Next.js**, designed to provide a seamless, zero-configuration deployment experience for modern frontend frameworks.
+    * **Connections:** Vercel has a symbiotic relationship with **Fullstack Builders** like **Next.js**. It understands their specific build outputs and can automatically deploy the frontend part to a global CDN for speed, while deploying the backend API routes as serverless functions. It connects directly to your **Git Repository**; a `git push` is all that's required to trigger a new deployment.
+
+* **Netlify**
+    * **Function:** A powerful platform that pioneered the &quot;JAMstack&quot; architecture (JavaScript, APIs, and Markup). It is excellent for deploying static sites and applications with serverless functions.
+    * **Connections:** Like Vercel, Netlify connects directly to your **Git Repository** for automated deployments. It's a key part of the **Infrastructure** layer for many frontend projects and often connects to **Backend-as-a-Service** platforms like **Supabase** or headless CMS platforms to pull in data.
+
+* **Cloudflare Pages**
+    * **Function:** A platform for deploying frontend applications that leverages Cloudflare's massive global network for extreme performance and security.
+    * **Connections:** It connects to your **Git Repository** and deploys your application to the &quot;edge&quot;—servers that are geographically very close to your users. This is a specific type of **Infrastructure** choice that prioritizes global low-latency. It integrates with Cloudflare's other services, like its serverless functions (Workers) and data stores (KV, D1).
+
+---
+### Category 2: Application &amp; Database Hosting Platforms
+
+These platforms provide more flexibility than frontend-focused clouds, allowing you to deploy traditional backend servers, databases, and other services that need to be &quot;always on.&quot;
+
+* **Railway**
+    * **Function:** A modern cloud platform designed to deploy any application or service from a Git repository or a **Docker** container.
+    * **Connections:** Railway is a more flexible piece of **Infrastructure**. It's where you would host a custom **Backend Tool** like an **Express.js** server, alongside a persistent **Database** like **PostgreSQL**. It solves the problem of needing to host both a server and a database without the complexity of a major cloud provider.
+
+* **Render**
+    * **Function:** A unified cloud platform for building and running applications and websites, known for its Heroku-like developer experience and straightforward pricing.
+    * **Connections:** Render connects directly to your **Git Repository** and can automatically build and deploy a wide variety of services, including custom backend servers, static websites, cron jobs, and managed databases. It's a direct competitor to Railway, offering a similar level of flexibility.
+
+* **Fly.io**
+    * **Function:** A platform that allows you to deploy applications and databases in containers close to your users around the world.
+    * **Connections:** Fly.io's unique connection is its focus on &quot;edge&quot; deployment for full applications, not just static files. It takes a **Docker** container and allows you to easily deploy it to multiple regions, which can significantly improve performance for a global user base.
+
+* **Heroku**
+    * **Function:** One of the original Platform-as-a-Service (PaaS) providers, which simplified web application deployment for a generation of developers.
+    * **Connections:** Heroku pioneered the `git push` deployment workflow that tools like Vercel and Railway now use. It connects to your **Git Repository** and manages the entire application lifecycle, from building to scaling.
+
+---
+### Category 3: Foundational Cloud Providers (IaaS)
+
+This is the bedrock layer of the internet. These are the massive, global cloud providers that rent out raw computing infrastructure. The platforms in the categories above are almost all built *on top* of these providers.
+
+* **Amazon Web Services (AWS), Google Cloud Platform (GCP), &amp; Microsoft Azure**
+    * **Function:** These platforms provide hundreds of raw infrastructure components as a service, including virtual servers (like AWS EC2), object storage (like AWS S3), managed databases (like AWS RDS), and complex networking.
+    * **Connections:** They are the ultimate foundation of the **Infrastructure** layer. A platform like **Vercel** runs its entire service on top of AWS. A developer chooses to build directly on AWS when they outgrow the abstractions of simpler platforms and need absolute, fine-grained control over every aspect of their infrastructure.
+
+---
+### Category 4: Containerization Tools
+
+These tools are not hosting platforms themselves, but a critical technology for packaging and running applications consistently across different environments.
+
+* **Docker**
+    * **Function:** A platform for building, shipping, and running applications in standardized, isolated environments called &quot;containers.&quot;
+    * **Connections:** Docker is a crucial part of your **Environment Configuration**. It solves the &quot;it works on my machine&quot; problem by packaging your application code along with all its dependencies into a single container. This container can then be run on a developer's laptop, or deployed to an **Application Hosting Platform** like **Railway**, or run at massive scale on a **Foundational Cloud Provider** like **AWS**, ensuring it behaves identically everywhere.
+
+---
+### Comparison Matrix: The Deployment &amp; Hosting Landscape
+
+| Tool | Primary Use Case | Level of Abstraction | Key Problem Solved | Connects Directly To... |
+| :--- | :--- | :--- | :--- | :--- |
+| **Vercel / Netlify** | Modern Frontend &amp; Serverless Functions | **High.** Fully managed &quot;Frontend Cloud.&quot; | Effortless, zero-config deployment for modern web apps. | Git Repositories, Fullstack Builders |
+| **Railway / Render** | Full Stack Apps &amp; Databases | **Medium.** Managed &quot;Application Platform.&quot; | Easy deployment of custom backend servers and databases. | Git Repositories, Docker, Databases |
+| **Fly.io** | Globally Distributed Applications | **Medium.** Managed &quot;Edge Application Platform.&quot;| Low-latency global deployments for full applications. | Docker Containers |
+| **AWS / GCP / Azure** | Anything; Complex Enterprise Systems| **Low.** Raw &quot;Infrastructure as a Service.&quot; | The need for ultimate power, control, and customization. | Every other layer of the stack, but requires manual configuration. |
+| **Docker** | Application Packaging &amp; Consistency | **N/A.** A packaging tool, not a host. | Ensuring an application runs the same way everywhere. | Backend Tools, Infrastructure Platforms |
+</code></pre>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

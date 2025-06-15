@@ -1,0 +1,2211 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An overview of various use cases that demonstrate how the Vibe Coding Iceberg framework can be applied in different project types.">
+      
+      
+      
+      
+        <link rel="prev" href="../../foundations/06d-env-config/">
+      
+      
+        <link rel="next" href="../00b-use-cases/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Use Cases - Vibe Coding Iceberg</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#use-cases-project-blueprints" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Vibe Coding Iceberg" class="md-header__button md-logo" aria-label="Vibe Coding Iceberg" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vibe Coding Iceberg
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Use Cases
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Vibe Coding Iceberg" class="md-nav__button md-logo" aria-label="Vibe Coding Iceberg" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Vibe Coding Iceberg
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    You Are Here
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Foundations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/00-foundations-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/01a-frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Architecture (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/01b-frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Architecture (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/02-backend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Backend Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/03a-database-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Database Modeling (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/03b-database-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Database Modeling (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/04-auth-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Auth Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/05-ai-assistance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - AI Assistance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06a-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06b-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06c-env-config.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (c)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06d-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (d)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Use Cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (a)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (a)
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#blueprint-1-the-modern-marketing-site-blog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint 1: The Modern Marketing Site &amp; Blog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blueprint 1: The Modern Marketing Site &amp; Blog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Goal:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-choices-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-ai-prompt-for-this-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example AI Prompt for this Workflow:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blueprint-2-the-saas-application-interactive-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint 2: The SaaS Application / Interactive Dashboard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blueprint 2: The SaaS Application / Interactive Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-goal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Goal:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-choices-connections_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-ai-prompt-for-this-workflow_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example AI Prompt for this Workflow:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blueprint-3-the-ai-powered-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint 3: The AI-Powered Application
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blueprint 3: The AI-Powered Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-goal_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Goal:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-choices-connections_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-ai-prompt-for-this-workflow_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example AI Prompt for this Workflow:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-decision-matrix-project-blueprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Decision Matrix: Project Blueprints
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00b-use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01a-build-a-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01b-build-a-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-saas-app-skeleton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - SaaS App Skeleton
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-personal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Personal Dashboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ai-portfolio-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - AI Portfolio Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-prompted-design-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Prompted Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-static-markdown-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Static Markdown Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tool Index
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tool Index
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/01-frontend-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/02-backend-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Backend Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/03-infra-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Infrastructure Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/04-fullstack-builders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Fullstack Builders (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/04b-fullstack-builders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Fullstack Builders (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/05-fullstack-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Fullstack Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/06-design-to-code-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Design-to-Code Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/07-ai-editors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07 - AI Editors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/08-databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08 - Databases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/09-host-deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    09 - Host & Deploy Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/10-comparison-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 - Comparison Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/01-frontend-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/02-ui-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - UI Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/03-backend-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Backend Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/04-api-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - API Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/05-fullstack-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Fullstack Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/06-infra-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Infrastructure Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/07-auth-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07 - Authentication Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/08-db-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08 - Database Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/09-prompt-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    09 - Prompt Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/10-vibe_coding_iceberg_prompt-cheat_sheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 - Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/00-patterns-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01a-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01b-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01c-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (c)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01d-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (d)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/02-api-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - API Patterns (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/02b-api-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - API Patterns (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/03-project-scaffolds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Project Scaffolds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/04-state-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - State Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/05-schema-migration-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Schema Migrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#blueprint-1-the-modern-marketing-site-blog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint 1: The Modern Marketing Site &amp; Blog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blueprint 1: The Modern Marketing Site &amp; Blog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Goal:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-choices-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-ai-prompt-for-this-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example AI Prompt for this Workflow:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blueprint-2-the-saas-application-interactive-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint 2: The SaaS Application / Interactive Dashboard
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blueprint 2: The SaaS Application / Interactive Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-goal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Goal:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-choices-connections_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-ai-prompt-for-this-workflow_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example AI Prompt for this Workflow:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blueprint-3-the-ai-powered-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint 3: The AI-Powered Application
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blueprint 3: The AI-Powered Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-goal_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Goal:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-choices-connections_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-ai-prompt-for-this-workflow_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example AI Prompt for this Workflow:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-decision-matrix-project-blueprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Decision Matrix: Project Blueprints
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="use-cases-project-blueprints">🚀 Use Cases &amp; Project Blueprints</h1>
+<p>This section serves as a practical playbook. We've covered the individual concepts and tools—the "what." Now, we'll explore the "how"—the way these pieces are assembled in different combinations to create real-world projects.</p>
+<p>Each of the following blueprints represents a common type of application. They showcase how a specific goal dictates your architectural choices, from the frontend and data layers all the way to deployment. This is the "bird's-eye view" in action, designed to provide a mental model for how to approach your own projects.</p>
+<hr />
+<h3 id="blueprint-1-the-modern-marketing-site-blog">Blueprint 1: The Modern Marketing Site &amp; Blog</h3>
+<ul>
+<li>
+<h4 id="the-goal">The Goal:</h4>
+<p>To build a lightning-fast, visually polished website with excellent Search Engine Optimization (SEO). The primary purpose is to showcase a brand, provide information, and publish content like blog posts or case studies. Performance and SEO are paramount.</p>
+</li>
+<li>
+<h4 id="architectural-choices-connections">Architectural Choices &amp; Connections:</h4>
+<ul>
+<li><strong>Fullstack Builder:</strong> <strong>Astro</strong> or <strong>Next.js</strong> are the top choices.<ul>
+<li><strong>Why?</strong> Both excel at Static Site Generation (SSG). This means they pre-build the entire website into simple HTML, CSS, and JavaScript files during the deployment process. Serving static files is the absolute fastest way to deliver a website, which is a major factor for both user experience and Google search rankings.</li>
+</ul>
+</li>
+<li><strong>Data Layer:</strong> A <strong>Headless CMS</strong> (Content-as-a-Service) like <strong>Contentful</strong>, <strong>Sanity.io</strong>, or <strong>Payload CMS</strong>.<ul>
+<li><strong>The Connection:</strong> This decouples content management from your code. Your marketing team can write and update blog posts in a user-friendly web interface (the CMS), and your Astro/Next.js site fetches this content via an <strong>API</strong> only when it builds. This is a secure and efficient way to manage content.</li>
+</ul>
+</li>
+<li><strong>Infrastructure:</strong> A <strong>Frontend Cloud</strong> platform like <strong>Vercel</strong>, <strong>Netlify</strong>, or <strong>Cloudflare Pages</strong>.<ul>
+<li><strong>The Connection:</strong> These platforms are optimized for hosting the static files generated by builders like Astro and Next.js. They automatically distribute your site across a global Content Delivery Network (CDN), ensuring that it loads almost instantly for users anywhere in the world.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="example-ai-prompt-for-this-workflow">Example AI Prompt for this Workflow:</h4>
+<blockquote>
+<p>"Using <strong>Astro</strong>, create a new blog page that fetches all posts at build time from the <strong>Sanity.io</strong> GraphQL API. For each post, generate a separate, static HTML page using Astro's dynamic routing. The page must include correct SEO meta tags for the post's title and description."</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h3 id="blueprint-2-the-saas-application-interactive-dashboard">Blueprint 2: The SaaS Application / Interactive Dashboard</h3>
+<ul>
+<li>
+<h4 id="the-goal_1">The Goal:</h4>
+<p>To build a secure, data-intensive web application that users must log into. Inside, they can interact with complex data, visualize information, and perform actions specific to their account.</p>
+</li>
+<li>
+<h4 id="architectural-choices-connections_1">Architectural Choices &amp; Connections:</h4>
+<ul>
+<li><strong>Fullstack Builder:</strong> <strong>Next.js</strong> or <strong>Remix</strong>.<ul>
+<li><strong>Why?</strong> Their integrated frontend and backend model is perfect for this use case. They allow you to build a highly interactive user interface while also providing a secure, server-side environment to write the complex API logic needed to interact with a database.</li>
+</ul>
+</li>
+<li><strong>Authentication:</strong> A dedicated <strong>Authentication Platform</strong> like <strong>Clerk</strong> or <strong>Auth0</strong>.<ul>
+<li><strong>The Connection:</strong> Building secure authentication is extremely difficult. These services handle the entire user identity lifecycle—from sign-up forms and social logins to password resets and session management. You integrate their components into your <strong>Next.js</strong> frontend and use their SDKs on your backend to protect your <strong>API routes</strong>.</li>
+</ul>
+</li>
+<li><strong>Data Layer:</strong> A robust <strong>Relational Database (SQL)</strong>, accessed through a modern service.<ul>
+<li><strong>Examples:</strong> <strong>Supabase</strong> (a BaaS that provides a PostgreSQL database) or a <strong>Serverless Database</strong> like <strong>Neon</strong> or <strong>PlanetScale</strong>.</li>
+<li><strong>The Connection:</strong> A SaaS application lives and dies by its data integrity. A powerful SQL database is essential. Your <strong>Next.js API routes</strong> will use an <strong>ORM</strong> like <strong>Prisma</strong> to communicate with the database, performing the complex queries needed for the dashboard.</li>
+</ul>
+</li>
+<li><strong>Infrastructure:</strong> Typically <strong>Vercel</strong> for the Next.js application, which then connects to your chosen database and auth services running elsewhere.</li>
+</ul>
+</li>
+<li>
+<h4 id="example-ai-prompt-for-this-workflow_1">Example AI Prompt for this Workflow:</h4>
+<blockquote>
+<p>"Create a protected <strong>Next.js API route</strong> that uses <strong>Prisma</strong> to fetch all 'invoices' belonging to the currently authenticated user. Use the <code>getAuth</code> function from <strong>Clerk</strong> to retrieve the <code>userId</code> on the server and use it to filter the database query."</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h3 id="blueprint-3-the-ai-powered-application">Blueprint 3: The AI-Powered Application</h3>
+<ul>
+<li>
+<h4 id="the-goal_2">The Goal:</h4>
+<p>To build a tool that leverages a Large Language Model (LLM) to provide a unique service, such as a chatbot that can answer questions about a private knowledge base (a technique known as Retrieval-Augmented Generation, or RAG).</p>
+</li>
+<li>
+<h4 id="architectural-choices-connections_2">Architectural Choices &amp; Connections:</h4>
+<ul>
+<li><strong>Fullstack Builder:</strong> <strong>Next.js</strong> remains a top choice due to its excellent backend capabilities and ecosystem.</li>
+<li><strong>Data Layer:</strong> This is the key difference. In addition to a primary database, you need a <strong>Vector Database</strong> like <strong>Pinecone</strong>, <strong>Weaviate</strong>, or <strong>Chroma</strong>.<ul>
+<li><strong>The Connection:</strong> You convert your knowledge base (e.g., PDFs, documents) into numerical representations called "embeddings" and store them here. When a user asks a question, your backend first queries the vector database to find the most semantically relevant chunks of text.</li>
+</ul>
+</li>
+<li><strong>Backend Logic &amp; External APIs:</strong> Your backend's primary job is to orchestrate calls between multiple services. The workflow is: User query comes in -&gt; Query vector database -&gt; Get relevant context -&gt; Send the original query <em>plus</em> the context to an <strong>External API</strong> from a provider like <strong>OpenAI (GPT-4o)</strong> or <strong>Anthropic (Claude 3)</strong>.</li>
+<li><strong>Frontend:</strong> The UI is often a chat interface, which can be easily built using libraries like the <strong>Vercel AI SDK</strong>.</li>
+</ul>
+</li>
+<li>
+<h4 id="example-ai-prompt-for-this-workflow_2">Example AI Prompt for this Workflow:</h4>
+<blockquote>
+<p>"Using the <strong>Vercel AI SDK</strong> and <strong>LangChain.js</strong>, create a <strong>Next.js API route</strong> that takes a user's query. The route must first use the <code>Pinecone</code> client to fetch the top 3 most relevant documents from our vector store, then pass those documents as context along with the user's query to the <strong>OpenAI GPT-4o</strong> model to generate a final answer. Stream the response back to the client."</p>
+</blockquote>
+</li>
+</ul>
+<hr />
+<h3 id="summary-decision-matrix-project-blueprints">Summary Decision Matrix: Project Blueprints</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Project Type</th>
+<th style="text-align: left;">Primary Goal</th>
+<th style="text-align: left;">Recommended Fullstack Builder</th>
+<th style="text-align: left;">Typical Data Layer</th>
+<th style="text-align: left;">Key Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Marketing Site / Blog</strong></td>
+<td style="text-align: left;">Performance &amp; SEO</td>
+<td style="text-align: left;"><strong>Astro</strong>, Next.js (SSG)</td>
+<td style="text-align: left;">Headless CMS (Contentful, Sanity)</td>
+<td style="text-align: left;">Static Site Generation</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SaaS App / Dashboard</strong></td>
+<td style="text-align: left;">Data Interaction &amp; Security</td>
+<td style="text-align: left;"><strong>Next.js</strong>, Remix</td>
+<td style="text-align: left;">Relational Database (PostgreSQL via Supabase/Neon)</td>
+<td style="text-align: left;">Authentication Platform (Clerk)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>AI Application</strong></td>
+<td style="text-align: left;">Intelligent Interaction</td>
+<td style="text-align: left;"><strong>Next.js</strong></td>
+<td style="text-align: left;">Vector Database (Pinecone, Chroma) + Primary DB</td>
+<td style="text-align: left;">External LLM API (OpenAI)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Simple Internal Tool</strong></td>
+<td style="text-align: left;">Speed of Development</td>
+<td style="text-align: left;">(Consider Low-Code)</td>
+<td style="text-align: left;">Integrated Database</td>
+<td style="text-align: left;">Visual Builder / No-Code Logic</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

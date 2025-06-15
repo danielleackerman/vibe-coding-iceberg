@@ -1,0 +1,2057 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A collection of prompts to aid frontend development, including frameworks, libraries, and UI components.">
+      
+      
+      
+      
+        <link rel="prev" href="../../tool-index/10-comparison-matrix/">
+      
+      
+        <link rel="next" href="../02-ui-prompts/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Frontend Prompts - Vibe Coding Iceberg</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#01-frontend-prompt-patterns" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Vibe Coding Iceberg" class="md-header__button md-logo" aria-label="Vibe Coding Iceberg" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vibe Coding Iceberg
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Frontend Prompts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Vibe Coding Iceberg" class="md-nav__button md-logo" aria-label="Vibe Coding Iceberg" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Vibe Coding Iceberg
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    You Are Here
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Foundations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/00-foundations-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/01a-frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Architecture (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/01b-frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Architecture (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/02-backend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Backend Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/03a-database-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Database Modeling (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/03b-database-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Database Modeling (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/04-auth-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Auth Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/05-ai-assistance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - AI Assistance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06a-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06b-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06c-env-config.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (c)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06d-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (d)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Use Cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/00-use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/00b-use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/01a-build-a-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/01b-build-a-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/02-saas-app-skeleton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - SaaS App Skeleton
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/03-personal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Personal Dashboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/04-ai-portfolio-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - AI Portfolio Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/05-prompted-design-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Prompted Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/06-static-markdown-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Static Markdown Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tool Index
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tool Index
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/01-frontend-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/02-backend-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Backend Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/03-infra-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Infrastructure Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/04-fullstack-builders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Fullstack Builders (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/04b-fullstack-builders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Fullstack Builders (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/05-fullstack-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Fullstack Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/06-design-to-code-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Design-to-Code Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/07-ai-editors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07 - AI Editors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/08-databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08 - Databases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/09-host-deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    09 - Host & Deploy Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/10-comparison-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 - Comparison Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Prompts
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Prompts
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#layouts-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Layouts &amp; Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styling-theming" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Styling &amp; Theming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactivity-motion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Interactivity &amp; Motion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-scaffolding-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 AI Scaffolding Prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-integration-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 API Integration (Frontend)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-experience-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Developer Experience Prompts
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-ui-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - UI Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-backend-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Backend Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-api-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - API Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-fullstack-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Fullstack Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-infra-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Infrastructure Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-auth-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07 - Authentication Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-db-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08 - Database Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-prompt-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    09 - Prompt Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-vibe_coding_iceberg_prompt-cheat_sheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 - Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/00-patterns-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01a-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01b-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01c-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (c)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01d-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (d)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/02-api-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - API Patterns (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/02b-api-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - API Patterns (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/03-project-scaffolds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Project Scaffolds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/04-state-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - State Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/05-schema-migration-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Schema Migrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#layouts-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Layouts &amp; Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#styling-theming" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Styling &amp; Theming
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactivity-motion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Interactivity &amp; Motion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-scaffolding-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 AI Scaffolding Prompts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-integration-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 API Integration (Frontend)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-experience-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Developer Experience Prompts
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="01-frontend-prompt-patterns">🎯 01 Frontend Prompt Patterns</h1>
+<p>A collection of prompt starters designed to help AI tools like <strong>Cursor</strong>, <strong>v0</strong>, <strong>Bolt</strong>, or <strong>Subframe</strong> generate UI code, components, and interactivity faster.</p>
+<p>Use these with AI-enhanced dev tools or even ChatGPT coding workflows.</p>
+<hr />
+<h2 id="layouts-structure">🧱 Layouts &amp; Structure</h2>
+<p>💡 “Generate a responsive React layout using Tailwind that includes a navbar, hero section, and feature grid.”</p>
+<p>💡 “Create a two-column layout with a sidebar and main content. Make it mobile-friendly.”</p>
+<p>💡 “Build a landing page with a header, signup CTA, and pricing cards.”</p>
+<hr />
+<h2 id="styling-theming">🎨 Styling &amp; Theming</h2>
+<p>💡 “Add dark mode toggle support to this Tailwind-styled React component.”</p>
+<p>💡 “Convert this plain HTML form into a styled React form using shadcn/ui components.”</p>
+<p>💡 “Style this page with Tailwind to match a sleek SaaS marketing theme.”</p>
+<hr />
+<h2 id="interactivity-motion">⚙️ Interactivity &amp; Motion</h2>
+<p>💡 “Add hover and tap animations using framer-motion to these buttons.”</p>
+<p>💡 “Make this menu component open and close with smooth animations.”</p>
+<p>💡 “Animate the hero section to fade in with a slight upward motion on load.”</p>
+<hr />
+<h2 id="ai-scaffolding-prompts">🧠 AI Scaffolding Prompts</h2>
+<p>💡 “Scaffold a Next.js 14 app using App Router, Tailwind, and shadcn/ui. Add a homepage and login page.”</p>
+<p>💡 “Set up a React app with Tailwind and a reusable layout system.”</p>
+<p>💡 “Generate a full React component file with props for title, image, and action button.”</p>
+<hr />
+<h2 id="api-integration-frontend">🔌 API Integration (Frontend)</h2>
+<p>💡 “Create a component that fetches blog posts from a Supabase table and displays them in cards.”</p>
+<p>💡 “Build a React search bar that queries an API endpoint as the user types (debounced).”</p>
+<p>💡 “Display data from a public JSON API in a responsive table using Tailwind.”</p>
+<hr />
+<h2 id="developer-experience-prompts">🧪 Developer Experience Prompts</h2>
+<p>💡 “Add TypeScript types to this React component and its props.”</p>
+<p>💡 “Explain how this component's useEffect hook works.”</p>
+<p>💡 “Refactor this component to use cleaner logic and avoid re-renders.”</p>
+<hr />
+<p>Let me know if you want versions of this prompt set tailored for:</p>
+<ul>
+<li>Framer</li>
+<li>Subframe</li>
+<li>v0.dev</li>
+<li>Webflow’s Custom Code blocks</li>
+</ul>
+<p>Or if you want this converted into a visual prompt matrix/grid for your repo!</p>
+<pre><code class="language-markdown"># 🎨 Frontend Prompts
+
+This document is a practical guide to writing effective prompts for AI assistants when building the **frontend**—the visual, interactive part of your application. The quality of the AI's output is a direct reflection of the quality of your input. The key is to move from simple, vague requests to structured, specific instructions.
+
+A good prompt tells the AI not only *what* to build, but *how* to build it, using which tools, and with what behaviors. This guide provides a cheat sheet for generating layouts, components, logic, and styles.
+
+---
+### 🧱 1. Scaffolding Page Layouts
+
+This is about creating the high-level structure or &quot;skeleton&quot; of a page or screen.
+
+* #### Basic Prompt:
+    &gt; Make a dashboard layout.
+
+* #### Specific Prompt:
+    &gt; Scaffold a new page component for a user dashboard using **Next.js App Router**. The layout must be a **two-column grid**: a fixed **250px sidebar** on the left (for navigation) and a main content area on the right. Make it responsive so the sidebar collapses on mobile screens. Use **Tailwind CSS** for all styling.
+
+* #### Why It's Better:
+    The specific prompt defines the **technology** (Next.js, Tailwind), the **architectural pattern** (two-column grid), and the **responsive behavior**, giving the AI a clear blueprint to follow.
+
+* #### 🛠️ Tool Examples:
+    `v0.dev`, `Cursor`, `GitHub Copilot`
+
+---
+### 🧩 2. Generating Specific Components
+
+This is about creating the individual, reusable &quot;Lego bricks&quot; of your user interface, like buttons, cards, and forms.
+
+* #### Basic Prompt:
+    &gt; I need a user profile card.
+
+* #### Specific Prompt:
+    &gt; Generate a reusable **React component** named `UserProfileCard`. It must accept **props** for `avatarUrl`, `name`, `username`, and `bio`. Inside the component, display an image for the avatar, the name, the username (prefixed with '@'), and the bio text. Include a &quot;Follow&quot; button. Style the card with a **border, rounded corners, and a subtle box shadow** using **Tailwind CSS**.
+
+* #### Why It's Better:
+    The specific prompt dictates the **component name**, its **API (the props)**, the **internal structure**, and the **visual style**. This ensures the generated component is immediately usable and fits your project's needs.
+
+* #### 🛠️ Tool Examples:
+    `v0.dev`, `Galileo AI`, `Subframe.com`
+
+---
+### 🧠 3. Implementing State &amp; Interactivity
+
+This is about adding the logic that makes your components &quot;come alive,&quot; such as handling user input, managing state, and calling APIs.
+
+* #### Basic Prompt:
+    &gt; Add a form that works.
+
+* #### Specific Prompt:
+    &gt; In this existing React component, add a login form with &quot;email&quot; and &quot;password&quot; input fields. Use the `useState` hook to manage the state of each input. Implement a `handleSubmit` function that prevents the default form submission. Add simple **validation**: the email must be a valid format, and the password must be at least 8 characters long. The &quot;Submit&quot; button should be **disabled** until both fields are valid.
+
+* #### Why It's Better:
+    The specific prompt defines the **state management strategy** (`useState`), the **event handler** (`handleSubmit`), the **validation rules**, and the **conditional UI logic** (the disabled button). This results in a secure and user-friendly form.
+
+* #### 🛠️ Tool Examples:
+    `Cursor`, `GitHub Copilot` (within an editor like VS Code or Replit)
+
+---
+### ✨ 4. Applying Styles &amp; Animations
+
+This focuses on the visual polish and user experience details that make an application feel great to use.
+
+* #### Basic Prompt:
+    &gt; Make this button look better.
+
+* #### Specific Prompt:
+    &gt; For this button component, apply the following **Tailwind CSS** classes: `bg-blue-600`, `hover:bg-blue-700`, `text-white`, `font-bold`, `py-2`, `px-4`, `rounded`. Additionally, use the **Framer Motion** library to add an animation: when hovered, the button should scale to `1.05`. The transition should be a gentle &quot;ease-in-out&quot; over `0.2` seconds.
+
+* #### Why It's Better:
+    The specific prompt provides exact styling details and names the **specific animation library** to use (`Framer Motion`), along with the desired animation properties. This gives the AI precise instructions for visual execution.
+
+* #### 🛠️ Tool Examples:
+    `GitHub Copilot`, `Cursor`
+
+---
+### 🔧 5. Refactoring &amp; Debugging Code
+
+This is about using AI not to create, but to improve and fix existing code. This is one of the most powerful use cases for modern AI editors.
+
+* #### Basic Prompt:
+    &gt; This code is broken, fix it.
+
+* #### Specific Prompt:
+    &gt; This React component is throwing a &quot;TypeError: Cannot read properties of undefined&quot; error when the `user` prop is not yet loaded from the API. **Refactor the code** to add a **conditional render**: while the `user` prop is null or undefined, display a `LoadingSpinner` component instead of trying to render the user's details. Explain the fix.
+
+* #### Why It's Better:
+    The specific prompt describes the **error**, identifies the **likely cause**, and prescribes the **exact solution** (conditional rendering). It also asks for an explanation, which is crucial for learning. This turns the AI into a powerful debugging partner and tutor.
+
+* #### 🛠️ Tool Examples:
+    `Cursor`, `GitHub Copilot Chat`, `Sourcegraph Cody`
+
+---
+### ✅ Summary Cheat Sheet
+
+| Prompting For... | Key Details to Include in Your Prompt | Example Tools |
+| :--- | :--- | :--- |
+| **Page Layouts** | Framework (Next.js, etc.), structural pattern (grid, flexbox), responsiveness, styling library (Tailwind). | `v0.dev`, `Cursor` |
+| **Components** | Component name, API (props), internal elements, stateful behavior, styling details. | `v0.dev`, `Subframe.com` |
+| **State &amp; Logic**| State management hook (`useState`), event handlers, validation rules, conditional logic (e.g., disabling a button). | `GitHub Copilot`, `Cursor` |
+| **Styling** | Exact library (Tailwind, Framer Motion), specific values (colors, sizes), desired animation behavior and timing. | `GitHub Copilot`, `Cursor` |
+| **Debugging** | The specific error message, the suspected cause, and a suggested pattern for the fix (e.g., &quot;add a conditional render&quot;). | `Cursor`, `Sourcegraph Cody`|
+</code></pre>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

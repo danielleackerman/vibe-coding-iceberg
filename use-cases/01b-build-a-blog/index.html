@@ -1,0 +1,2914 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A step-by-step guide to building a blog using Vibe Coding principles, covering frontend and backend integration.">
+      
+      
+      
+      
+        <link rel="prev" href="../01a-build-a-blog/">
+      
+      
+        <link rel="next" href="../02-saas-app-skeleton/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Build a Blog - Vibe Coding Iceberg</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-1-choose-and-scaffold-your-project-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Vibe Coding Iceberg" class="md-header__button md-logo" aria-label="Vibe Coding Iceberg" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vibe Coding Iceberg
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Build a Blog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Vibe Coding Iceberg" class="md-nav__button md-logo" aria-label="Vibe Coding Iceberg" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Vibe Coding Iceberg
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    You Are Here
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Foundations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/00-foundations-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/01a-frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Architecture (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/01b-frontend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Architecture (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/02-backend-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Backend Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/03a-database-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Database Modeling (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/03b-database-modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Database Modeling (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/04-auth-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Auth Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/05-ai-assistance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - AI Assistance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06a-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06b-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06c-env-config.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (c)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../foundations/06d-env-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Env Config (d)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Use Cases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Use Cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00b-use-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Overview (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01a-build-a-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (b)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Build a Blog (b)
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-choose-and-scaffold-your-project-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Choose and Scaffold Your Project Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Choose and Scaffold Your Project Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-establish-the-styling-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Establish the Styling Foundation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Establish the Styling Foundation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-design-the-content-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Design the Content Schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Design the Content Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-build-the-homepage-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Build the Homepage UI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Build the Homepage UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-connect-homepage-to-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Connect Homepage to Content Source
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Connect Homepage to Content Source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-build-the-individual-post-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Build the Individual Post Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Build the Individual Post Page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-connect-the-post-page-to-the-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Connect the Post Page to the CMS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7: Connect the Post Page to the CMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-add-a-newsletter-signup-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Add a Newsletter Signup Feature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 8: Add a Newsletter Signup Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-add-site-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Add Site Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 9: Add Site Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-deploy-the-blog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 10: Deploy the Blog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 10: Deploy the Blog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-saas-app-skeleton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - SaaS App Skeleton
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-personal-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Personal Dashboard
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-ai-portfolio-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - AI Portfolio Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-prompted-design-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Prompted Design System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-static-markdown-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Static Markdown Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tool Index
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tool Index
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/01-frontend-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/02-backend-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - Backend Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/03-infra-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Infrastructure Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/04-fullstack-builders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Fullstack Builders (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/04b-fullstack-builders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - Fullstack Builders (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/05-fullstack-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Fullstack Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/06-design-to-code-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Design-to-Code Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/07-ai-editors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07 - AI Editors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/08-databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08 - Databases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/09-host-deploy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    09 - Host & Deploy Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tool-index/10-comparison-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 - Comparison Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Prompts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/01-frontend-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Frontend Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/02-ui-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - UI Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/03-backend-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Backend Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/04-api-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - API Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/05-fullstack-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Fullstack Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/06-infra-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06 - Infrastructure Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/07-auth-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07 - Authentication Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/08-db-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    08 - Database Prompts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/09-prompt-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    09 - Prompt Taxonomy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/10-vibe_coding_iceberg_prompt-cheat_sheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 - Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/00-patterns-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 - Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01a-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01b-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01c-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (c)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/01d-component-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 - Component Patterns (d)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/02-api-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - API Patterns (a)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/02b-api-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02 - API Patterns (b)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/03-project-scaffolds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03 - Project Scaffolds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/04-state-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04 - State Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../patterns/05-schema-migration-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05 - Schema Migrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-choose-and-scaffold-your-project-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Choose and Scaffold Your Project Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Choose and Scaffold Your Project Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-establish-the-styling-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Establish the Styling Foundation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Establish the Styling Foundation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-design-the-content-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Design the Content Schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Design the Content Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-build-the-homepage-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Build the Homepage UI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Build the Homepage UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-connect-homepage-to-content-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Connect Homepage to Content Source
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Connect Homepage to Content Source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-build-the-individual-post-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Build the Individual Post Page
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Build the Individual Post Page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-connect-the-post-page-to-the-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Connect the Post Page to the CMS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7: Connect the Post Page to the CMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-add-a-newsletter-signup-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Add a Newsletter Signup Feature
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 8: Add a Newsletter Signup Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-add-site-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Add Site Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 9: Add Site Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-deploy-the-blog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 10: Deploy the Blog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 10: Deploy the Blog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-prompt-example_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 AI Prompt Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices-connections_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices &amp; Connections:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>01 - Build a Blog (b)</h1>
+
+<p>Building a modern blog is a foundational project that touches every layer of the web development ecosystem, from content strategy to deployment infrastructure. This blueprint will guide you through the process of creating a high-performance, easily manageable content platform from start to finish. We will focus on a "headless" architecture, where your content is managed separately from your live website, a technique that provides immense flexibility and speed. This guide breaks the process down into ten distinct steps, offering clear explanations and practical AI prompts for each phase. By the end, you will have a comprehensive mental model for how a professional, content-driven site is assembled.</p>
+<hr />
+<h3 id="step-1-choose-and-scaffold-your-project-framework">Step 1: Choose and Scaffold Your Project Framework</h3>
+<p><strong>The Goal:</strong> To create the foundational file structure and development environment for the application. This is the <strong>chassis</strong> of your site.</p>
+<p><strong>The Action:</strong> We will use a command-line interface (CLI) to generate a new, ready-to-code project. This choice of framework is the most significant architectural decision you will make, as it influences how you will handle everything from routing to data fetching.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Generate the command to scaffold a new web project named <code>my-blog</code> using <strong>[Chosen Tool's CLI]</strong>. The project must be pre-configured with support for <strong>TypeScript</strong>."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Astro</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For top performance.</strong> Choose Astro if your primary goal is the fastest possible load time. It excels at building static sites that ship zero JavaScript by default, which is ideal for content and SEO.</td>
+<td style="text-align: left;">It can connect to any <strong>UI Component</strong> framework (React, Svelte) as needed, and fetches data from any <strong>Headless CMS</strong> or API at build time.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Next.js</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For power and flexibility.</strong> Choose Next.js if you want a powerful React-based framework that can be a fast static site today and scale into a complex web app tomorrow.</td>
+<td style="text-align: left;">It has a deep, seamless connection to the <strong>Vercel</strong> deployment platform and the entire <strong>React</strong> component ecosystem.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Eleventy</strong></td>
+<td style="text-align: left;">JavaScript</td>
+<td style="text-align: left;"><strong>For simplicity and control.</strong> Choose Eleventy if you prefer a minimal, flexible static site generator without the complexity of a large JavaScript framework.</td>
+<td style="text-align: left;">It connects to various <strong>Templating Languages</strong> (like Nunjucks or Liquid) and can source data from local <strong>Markdown</strong> files or simple data files.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-2-establish-the-styling-foundation">Step 2: Establish the Styling Foundation</h3>
+<p><strong>The Goal:</strong> To establish the visual language and styling system for the entire site.</p>
+<p><strong>The Action:</strong> We'll choose and configure a styling methodology. This decision will dictate how you apply your brand's look and feel to all your components.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_1">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Configure my <strong>[Chosen Framework]</strong> project to use <strong>[Chosen Tool]</strong>. Generate the necessary configuration files and show me how to import the base styles into my main layout file."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_1">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Tailwind CSS</strong></td>
+<td style="text-align: left;">CSS</td>
+<td style="text-align: left;"><strong>For custom, rapid design.</strong> This utility-first framework allows you to build completely custom designs without writing traditional CSS files.</td>
+<td style="text-align: left;">It connects to your project via a configuration file (<code>tailwind.config.js</code>) where you define your <strong>Design Tokens</strong> (colors, fonts).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Pico.css</strong></td>
+<td style="text-align: left;">CSS</td>
+<td style="text-align: left;"><strong>For beautiful defaults with no effort.</strong> This is a "classless" CSS library that applies elegant styling to semantic HTML tags automatically.</td>
+<td style="text-align: left;">It connects to your project via a single <code>&lt;link&gt;</code> tag. It's a great choice for when you want a clean look without any configuration.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Sass</strong></td>
+<td style="text-align: left;">SCSS/Sass</td>
+<td style="text-align: left;"><strong>For programmatic and organized CSS.</strong> Choose this if you want the power of variables, functions, and mixins to write more maintainable, large-scale CSS.</td>
+<td style="text-align: left;">It connects to your build process, compiling your <code>.scss</code> files into standard CSS that the browser can understand.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-3-design-the-content-schema">Step 3: Design the Content Schema</h3>
+<p><strong>The Goal:</strong> To define the structure of a "blog post" before any content is written. This is the blueprint for your data.</p>
+<p><strong>The Action:</strong> We will define all the fields a blog post can have, such as a title, an image, and the main body text.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_2">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Using <strong>[Chosen Tool's Syntax]</strong>, generate the schema definition for a <code>post</code> document. It requires fields for <code>title</code> (string), <code>slug</code> (a unique identifier based on the title), <code>mainImage</code> (an image), <code>publishedAt</code> (a date), and <code>body</code> (a rich text field)."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_2">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Headless CMS (Sanity.io)</strong></td>
+<td style="text-align: left;">JavaScript</td>
+<td style="text-align: left;"><strong>For a rich editing experience.</strong> Choose this for a powerful, cloud-hosted interface that allows you or your clients to easily manage content.</td>
+<td style="text-align: left;">Your <strong>Fullstack Builder</strong> will connect to the Sanity <strong>API</strong> to fetch this content. This decouples your content from your code.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Git-based CMS (Decap CMS)</strong></td>
+<td style="text-align: left;">YAML</td>
+<td style="text-align: left;"><strong>For content in your repository.</strong> Choose this if you want a user-friendly editing interface for non-developers, but want the content itself to be stored as Markdown files in your <strong>Git Repository</strong>.</td>
+<td style="text-align: left;">It connects your Git provider (like GitHub) to a web-based UI, committing changes back to your repository just like a developer would.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Local Markdown Files</strong></td>
+<td style="text-align: left;">Markdown</td>
+<td style="text-align: left;"><strong>For developer-centric content.</strong> Choose this for the simplest possible approach, where blog posts are just <code>.md</code> files in a folder within your project.</td>
+<td style="text-align: left;">Your <strong>Fullstack Builder</strong> connects to the local file system to read and parse these files during the build process.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-4-build-the-homepage-ui">Step 4: Build the Homepage UI</h3>
+<p><strong>The Goal:</strong> To create the frontend component that displays a list of all blog post previews.</p>
+<p><strong>The Action:</strong> We will write the code for the main <code>PostList</code> or <code>PostCard</code> components that will be displayed on the blog's index page.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_3">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Using <strong>[Chosen UI Library]</strong>, create a <code>PostCard</code> component. It must accept props for <code>title</code>, <code>slug</code>, and <code>coverImage</code>. The entire card must be a link that navigates to <code>/blog/[slug]</code>. Use <strong>Tailwind CSS</strong> to style it with a hover effect."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_3">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. React</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>The industry standard.</strong> Choose this for access to the largest ecosystem of libraries, tools, and developer talent.</td>
+<td style="text-align: left;">It's the UI layer for <strong>Fullstack Builders</strong> like Next.js and Astro.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Svelte</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For performance and simplicity.</strong> Svelte is a compiler that results in smaller, faster code with a famously gentle learning curve.</td>
+<td style="text-align: left;">It's the UI layer for the <strong>SvelteKit</strong> fullstack builder.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Web Components</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For framework-agnostic UIs.</strong> Choose this if you want to build components that can be used in any project, regardless of the main framework.</td>
+<td style="text-align: left;">It connects directly to the browser's native component model, making it highly portable.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-5-connect-homepage-to-content-source">Step 5: Connect Homepage to Content Source</h3>
+<p><strong>The Goal:</strong> To fetch the list of blog posts from our chosen data source and display them on the homepage.</p>
+<p><strong>The Action:</strong> We will write the data-fetching logic inside our homepage. The method we choose will determine how "live" our data is.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_4">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"In my <strong>[Chosen Framework]</strong> homepage, write the function to fetch all posts from my <strong>[Chosen Content Source]</strong>. I only need the <code>title</code>, <code>slug</code>, and <code>coverImage</code> for each post. This data should be fetched <strong>at build time</strong> to generate a static page."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_4">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Static Site Generation (SSG)</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For maximum performance.</strong> This fetches all data once, at build time, and generates static HTML. Best for blogs.</td>
+<td style="text-align: left;">This connects your <strong>Data Source</strong> to your <strong>Deployment</strong> process. The live site does not need a live connection to the database.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Server-Side Rendering (SSR)</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For dynamic content.</strong> This fetches data on the server for <em>every single request</em>. Useful if your content changes constantly.</td>
+<td style="text-align: left;">This creates a live connection between your <strong>Infrastructure</strong> (the server) and your <strong>Data Source</strong> for every visitor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Incremental Static Regen. (ISR)</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>The hybrid approach.</strong> This pre-builds the page like SSG, but then automatically rebuilds it in the background at a set interval (e.g., every 5 minutes).</td>
+<td style="text-align: left;">This connects your <strong>Infrastructure</strong> to your <strong>Data Source</strong> periodically, giving you the performance of static with near-real-time updates.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-6-build-the-individual-post-page">Step 6: Build the Individual Post Page</h3>
+<p><strong>The Goal:</strong> To create the UI template that will display the full content of a single blog post.</p>
+<p><strong>The Action:</strong> We'll create a dynamic page that can render any post from our CMS. This involves creating a template with a title, image, and a main content area.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_5">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Create the UI for a single blog post page in my <strong>Next.js</strong> app. It should display the <code>title</code> in an <code>h1</code> tag, the <code>mainImage</code> at the top, and then render the <code>body</code> content below. The body content is coming from Sanity.io's Portable Text format."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_5">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Portable Text Renderer</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For rich, block-based content.</strong> If you're using a modern CMS like <strong>Sanity.io</strong>, you need a dedicated library to render its structured content.</td>
+<td style="text-align: left;">This connects your rich text <strong>Data Source</strong> to your <strong>React Components</strong>, allowing you to render complex content like custom callouts or image galleries.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Markdown Renderer</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For Markdown-based content.</strong> If your content is stored in Markdown, you need a library like <code>markdown-it</code> to parse it into HTML.</td>
+<td style="text-align: left;">This connects your Markdown <strong>Data Source</strong> to your <strong>Frontend UI</strong>, translating plain text into formatted HTML.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. <code>dangerouslySetInnerHTML</code></strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>For simple HTML content.</strong> If your CMS provides pre-rendered HTML, this React prop allows you to inject it directly into the page.</td>
+<td style="text-align: left;">This connects your pre-rendered HTML <strong>Data Source</strong> to your <strong>React Component</strong>, but should be used with caution as it can expose you to security risks.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-7-connect-the-post-page-to-the-cms">Step 7: Connect the Post Page to the CMS</h3>
+<p><strong>The Goal:</strong> To fetch the specific content for a single post based on the URL.</p>
+<p><strong>The Action:</strong> We will implement dynamic routing. The page <code>my-blog.com/posts/my-first-post</code> should know to fetch the data for the post with the "slug" <code>my-first-post</code>.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_6">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"In my <strong>Next.js</strong> app, implement <code>generateStaticParams</code> to fetch all post slugs from my <strong>CMS</strong> at build time. Then, in the page component, use the <code>slug</code> parameter to write a query that fetches only the data for that single, corresponding post."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_6">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Next.js Dynamic Routes</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>The Next.js standard.</strong> Use the <code>[slug]</code> folder notation to create dynamic pages.</td>
+<td style="text-align: left;">Connects a URL parameter to the data-fetching logic for that page within the <strong>Next.js Fullstack Builder</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Astro Dynamic Routes</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>The Astro standard.</strong> Use a <code>[...slug].astro</code> file to achieve the same result in Astro.</td>
+<td style="text-align: left;">Connects a URL parameter to the data-fetching logic within the <strong>Astro Framework</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Gatsby <code>createPages</code> API</strong></td>
+<td style="text-align: left;">JavaScript</td>
+<td style="text-align: left;"><strong>The Gatsby standard.</strong> Use the <code>gatsby-node.js</code> file to programmatically generate pages from your data source during the build process.</td>
+<td style="text-align: left;">Connects your <strong>Data Source</strong> directly to your <strong>Build Process</strong> to create all the necessary pages.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-8-add-a-newsletter-signup-feature">Step 8: Add a Newsletter Signup Feature</h3>
+<p><strong>The Goal:</strong> To add an interactive feature that allows readers to subscribe to a newsletter.</p>
+<p><strong>The Action:</strong> We'll create a simple form component and connect it to a third-party email marketing service.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_7">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Create a <code>NewsletterForm</code> React component. It needs a single email input and a submit button. When submitted, it should make a <code>POST</code> request to my backend API route at <code>/api/subscribe</code>, sending the email address."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_7">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Resend + React Email</strong></td>
+<td style="text-align: left;">TypeScript/JS</td>
+<td style="text-align: left;"><strong>The modern developer choice.</strong> Build and send beautiful, reliable emails using React components for templating.</td>
+<td style="text-align: left;">This connects your <strong>Backend API</strong> to the Resend email service. The emails themselves are built as <strong>React Components</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. ConvertKit / Mailchimp</strong></td>
+<td style="text-align: left;">API (JSON)</td>
+<td style="text-align: left;"><strong>The marketing-first choice.</strong> Use a full-featured email marketing platform that handles subscribers, sequences, and analytics.</td>
+<td style="text-align: left;">This connects your <strong>Backend API</strong> to a powerful <strong>Third-Party Marketing Platform</strong> via their API.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Netlify Forms</strong></td>
+<td style="text-align: left;">HTML</td>
+<td style="text-align: left;"><strong>The simplest choice for Netlify sites.</strong> If you're deploying on Netlify, you can add an attribute to your HTML form, and Netlify will handle the submission and notification for you.</td>
+<td style="text-align: left;">This connects your <strong>Frontend Form</strong> directly to your <strong>Infrastructure Platform</strong>, bypassing the need for a custom backend function.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-9-add-site-analytics">Step 9: Add Site Analytics</h3>
+<p><strong>The Goal:</strong> To add a tool to track visitor traffic and engagement on the blog.</p>
+<p><strong>The Action:</strong> We will integrate a third-party analytics script into our application.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_8">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Show me how to integrate <strong>[Chosen Tool]</strong> into my <strong>Next.js</strong> application. I need the code for the tracking script and instructions on the correct way to add it to my root layout to ensure it tracks all page views."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_8">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Vercel Analytics</strong></td>
+<td style="text-align: left;">JS</td>
+<td style="text-align: left;"><strong>The integrated choice.</strong> If you are deploying on Vercel, this is the easiest option. It's privacy-focused and requires zero configuration.</td>
+<td style="text-align: left;">This connects your deployed site directly to your <strong>Vercel Infrastructure</strong>, providing analytics with no third-party scripts needed.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Plausible / Fathom Analytics</strong></td>
+<td style="text-align: left;">JS</td>
+<td style="text-align: left;"><strong>The privacy-first choice.</strong> Choose these if you want to respect user privacy, avoid cookies, and have a simple, clean analytics dashboard.</td>
+<td style="text-align: left;">These are <strong>External Services</strong> that you connect to your <strong>Frontend</strong> via a simple script.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Google Analytics</strong></td>
+<td style="text-align: left;">JS</td>
+<td style="text-align: left;"><strong>The powerful, free choice.</strong> Choose this if you want the most feature-rich analytics tool available and need to connect to other Google marketing tools.</td>
+<td style="text-align: left;">This connects your site to the vast <strong>Google Marketing Platform</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-10-deploy-the-blog">Step 10: Deploy the Blog</h3>
+<p><strong>The Goal:</strong> To push our completed site to the public internet and automate future updates.</p>
+<p><strong>The Action:</strong> We will connect our Git repository to our chosen hosting platform.</p>
+<ul>
+<li>
+<h4 id="ai-prompt-example_9">🤖 AI Prompt Example:</h4>
+<blockquote>
+<p>"Generate a complete <code>.env.example</code> file for my blog. It must include placeholders for all the secrets I need for a production deployment on <strong>[Chosen Platform]</strong>: my Sanity.io project ID and API token, and my newsletter service API key."</p>
+</blockquote>
+</li>
+<li>
+<h4 id="technology-choices-connections_9">Technology Choices &amp; Connections:</h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">When &amp; Why to Choose It</th>
+<th style="text-align: left;">Connects To...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Vercel</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;"><strong>For Next.js applications.</strong> The specialized, "best-in-class" choice for deploying a Next.js project with zero configuration.</td>
+<td style="text-align: left;">Vercel is the <strong>Infrastructure Platform</strong> that is most tightly integrated with the <strong>Next.js Fullstack Builder</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Netlify</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;"><strong>For a variety of static site generators.</strong> An excellent and powerful alternative, especially if you chose Astro or Eleventy.</td>
+<td style="text-align: left;">This <strong>Infrastructure Platform</strong> connects to your <strong>Git Repository</strong> for automated deployments and has a rich ecosystem of add-ons.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. GitHub Pages</strong></td>
+<td style="text-align: left;">N/A</td>
+<td style="text-align: left;"><strong>For simple, free hosting.</strong> If your site is purely static (no backend functions needed), this is a free and easy way to get it online.</td>
+<td style="text-align: left;">This connects your <strong>Git Repository</strong> directly to GitHub's own simple <strong>Hosting Infrastructure</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>This blueprint provides a complete, end-to-end mental model for how a modern, high-performance blog is constructed. It demonstrates how choices made at each layer of the stack—from the framework to the CMS to the deployment platform—are all interconnected. The specific combination of tools creates a workflow that is both powerful for the developer and incredibly fast for the end user. By understanding these connections, you can confidently begin to assemble the pieces for your own content platform. This is the foundation upon which you can build any number of creative and engaging online experiences.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
